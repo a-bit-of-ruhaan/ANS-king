@@ -1,0 +1,71 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-background: hsl(45, 29%, 96%);
+  --color-foreground: hsl(220, 20%, 15%);
+
+  --color-card: hsl(0, 0%, 100%);
+  --color-card-foreground: hsl(220, 20%, 15%);
+
+  --color-popover: hsl(0, 0%, 100%);
+  --color-popover-foreground: hsl(220, 20%, 15%);
+
+  --color-primary: hsl(215, 85%, 40%);
+  --color-primary-foreground: hsl(0, 0%, 100%);
+
+  --color-secondary: hsl(15, 75%, 55%);
+  --color-secondary-foreground: hsl(0, 0%, 100%);
+
+  --color-muted: hsl(45, 20%, 90%);
+  --color-muted-foreground: hsl(220, 10%, 45%);
+
+  --color-accent: hsl(150, 70%, 40%);
+  --color-accent-foreground: hsl(0, 0%, 100%);
+
+  --color-destructive: hsl(340, 75%, 55%);
+  --color-destructive-foreground: hsl(0, 0%, 100%);
+
+  --color-border: hsl(45, 15%, 85%);
+  --color-input: hsl(45, 15%, 85%);
+  --color-ring: hsl(215, 85%, 40%);
+
+  --radius-lg: 0.75rem;
+  --radius-md: calc(0.75rem - 2px);
+  --radius-sm: calc(0.75rem - 4px);
+}
+
+@layer base {
+  :root {
+    --background: 45 29% 96%;
+    --foreground: 220 20% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+    --primary: 215 85% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 15 75% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 45 20% 90%;
+    --muted-foreground: 220 10% 45%;
+    --accent: 150 70% 40%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 340 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 45 15% 85%;
+    --input: 45 15% 85%;
+    --ring: 215 85% 40%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
